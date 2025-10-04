@@ -12,9 +12,9 @@ def calculate_metrics(y_true: np.ndarray, y_pred: np.ndarray) -> Dict[str, float
     """Calculate classification metrics."""
     return {
         'accuracy': accuracy_score(y_true, y_pred),
-        'precision': precision_score(y_true, y_pred), #(y_true, y_pred, average='weighted', zero_division=0)
-        'recall': recall_score(y_true, y_pred), #(y_true, y_pred, average='weighted', zero_division=0)
-        'f1': f1_score(y_true, y_pred) #(y_true, y_pred, average='weighted', zero_division=0)
+        'precision': precision_score(y_true, y_pred, average='weighted', zero_division=0),
+        'recall': recall_score(y_true, y_pred, average='weighted', zero_division=0),
+        'f1': f1_score(y_true, y_pred, average='weighted', zero_division=0)
     }
 
 
